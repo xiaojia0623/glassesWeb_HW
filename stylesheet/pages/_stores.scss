@@ -1,0 +1,46 @@
+
+//對應的主html -- stores.html
+//門市分店區塊 設定
+.shopper-card{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    .card{
+        width: 30%;
+        .btn{
+            background-color: #000;
+            color:#ffffff;
+            text-align: center;
+            padding: 8px;
+            max-width: 100%;
+            text-decoration: none;
+            display: block;
+        }
+    }
+}
+@include pad{
+    .shopper-card{
+        justify-content:space-between;
+        .card{
+            width:47%;
+            margin: 0 ;
+        }
+    }
+}
+
+@include iphone{
+    .shopper-card{
+        flex-direction: column;
+        .card{
+            width:100%;
+            margin: 0 auto;
+            .card-header{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
